@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rameshwar Mobile & Watch</title>
+
+<meta name="description"
+content="Rameshwar Mobile & Watch - Premium Watches Collection">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#08090c;
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,9,12,.92);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #292929;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:16px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+.logo span{
+    color:#d8b15c;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#e0bd6a;
+}
+
+/* HERO */
+
+.hero{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px 60px;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:40px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 13px;
+    border:1px solid #765f31;
+    border-radius:30px;
+    color:#e5c678;
+    font-size:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:clamp(42px,7vw,76px);
+    line-height:.95;
+    margin:20px 0;
+}
+
+.hero h1 span{
+    color:#d8b15c;
+}
+
+.hero p{
+    color:#aaa;
+    line-height:1.7;
+    max-width:600px;
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    margin-top:28px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 20px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.primary{
+    background:linear-gradient(135deg,#f0d28a,#b88c35);
+    color:#111;
+}
+
+.secondary{
+    border:1px solid #444;
+    color:#fff;
+}
+
+.hero-card{
+    background:#111318;
+    padding:15px;
+    border-radius:25px;
+    border:1px solid #292929;
+}
+
+.hero-card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+.mini{
+    color:#999;
+    font-size:13px;
+    padding:15px 5px 5px;
+}
+
+/* SECTIONS */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+.section h2{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.section-head p{
+    color:#999;
+    line-height:1.6;
+}
+
+/* FILTER */
+
+.controls{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin:25px 0;
+}
+
+.filter{
+    background:#111318;
+    color:#ddd;
+    border:1px solid #303030;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.filter:hover,
+.filter.active{
+    border-color:#d8b15c;
+    color:#e5c678;
+}
+
+.search{
+    width:250px;
+    background:#111318;
+    color:white;
+    border:1px solid #303030;
+    padding:11px 14px;
+    border-radius:10px;
+    outline:none;
+}
+
+/* PRODUCTS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.card{
+    background:linear-gradient(160deg,#15171c,#0d0e11);
+    border:1px solid #292929;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#a88443;
+}
+
+.pic{
+    position:relative;
+    aspect-ratio:1/1;
+    background:#eee;
+    overflow:hidden;
+}
+
+.pic img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.3s;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+.tag{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:rgba(0,0,0,.8);
+    padding:6px 9px;
+    border-radius:20px;
+    font-size:11px;
+}
+
+.info{
+    padding:15px;
+}
+
+.info h3{
+    font-size:16px;
+    margin-bottom:7px;
+}
+
+.type{
+    color:#888;
+    font-size:12px;
+}
+
+.price{
+    color:#e4c16e;
+    font-size:21px;
+    font-weight:bold;
+    margin:13px 0;
+}
+
+.order{
+    display:block;
+    text-align:center;
+    background:#191b20;
+    border:1px solid #333;
+    padding:10px;
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+}
+
+.order:hover{
+    background:#d3ac58;
+    color:#111;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.feature{
+    background:#101216;
+    border:1px solid #292929;
+    padding:22px;
+    border-radius:16px;
+}
+
+.feature b{
+    display:block;
+    color:#e0bd6a;
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#999;
+    line-height:1.6;
+}
+
+/* CONTACT */
+
+.contact-box{
+    background:#111318;
+    border:1px solid #292929;
+    border-radius:18px;
+    padding:25px;
+    line-height:2;
+}
+
+.contact-box strong{
+    color:#e1be6a;
+}
+
+.contact-box a{
+    color:#e1be6a;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #292929;
+    text-align:center;
+    padding:30px 20px;
+    color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:650px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        padding-top:55px;
+    }
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:40px 14px;
+    }
+
+    .hero-card img{
+        height:300px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="nav">
+
+<div class="logo">
+RAMESHWAR <span>MOBILE & WATCH</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#watches">Watches</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div>
+
+<div class="badge">
+Premium Watch Collection
+</div>
+
+<h1>
+Rameshwar<br>
+<span>Mobile & Watch</span>
+</h1>
+
+<p>
+Premium watches for men and women.
+Explore Titan, Desire and other stylish
+watch collections at Rameshwar Mobile & Watch.
+</p>
+
+<div class="buttons">
+
+<a href="#watches" class="btn primary">
+Explore Watches
+</a>
+
+<a href="#contact" class="btn secondary">
+Contact Shop
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<img src="assets/watch_19.jpg"
+alt="Premium Watch">
+
+<div class="mini">
+Premium collection • Stylish designs •
+Men & Women watches
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- WATCHES -->
+
+<section class="section" id="watches">
+
+<div class="section-head">
+
+<h2>
+Watch Collection
+</h2>
+
+<p>
+Choose from our premium collection.
+</p>
+
+</div>
+
+
+<div class="controls">
+
+<button class="filter active"
+data-filter="All">
+All
+</button>
+
+<button class="filter"
+data-filter="Titan">
+Titan
+</button>
+
+<button class="filter"
+data-filter="Desire">
+Desire
+</button>
+
+<button class="filter"
+data-filter="Metal">
+Metal
+</button>
+
+<button class="filter"
+data-filter="Leather">
+Leather
+</button>
+
+<button class="filter"
+data-filter="Chronograph">
+Triple Working
+</button>
+
+<input
+class="search"
+id="search"
+placeholder="Search watch..."
+>
+
+</div>
+
+
+<div class="grid" id="grid"></div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<h2>
+Why Rameshwar?
+</h2>
+
+<p style="color:#999;margin-top:8px;">
+Premium collection with stylish designs
+for every occasion.
+</p>
+
+
+<div class="features">
+
+<div class="feature">
+
+<b>
+⌚ Premium Collection
+</b>
+
+<p>
+Titan, Desire and other stylish watches
+for men and women.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<b>
+✨ Luxury Presentation
+</b>
+
+<p>
+Premium dark and gold design for
+a modern shopping experience.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<b>
+📱 Mobile Friendly
+</b>
+
+<p>
+Website works smoothly on mobile,
+tablet and computer.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+
+<h2>
+Contact Us
+</h2>
+
+<br>
+
+<div class="contact-box">
+
+<strong>
+Rameshwar Mobile & Watch
+</strong>
+
+<br>
+
+📍 Address:
+Riddhi Siddhi Residency,
+New Panvel, Sector 3
+
+<br>
+
+📞 Mobile:
+<a href="tel:+917665669817">
+7665669817
+</a>
+
+<br>
+
+💬 WhatsApp:
+<a
+href="https://wa.me/917665669817"
+target="_blank">
+
+Chat on WhatsApp
+
+</a>
+
+<br><br>
+
+<a
+class="btn primary"
+href="https://wa.me/917665669817"
+target="_blank">
+
+Order / Enquire on WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Rameshwar Mobile & Watch
+
+<br>
+
+Premium Watches • New Panvel
+
+</footer>
+
+
+
+<script>
+
+
+/* PRODUCT DATA */
+
+const products = [
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 01",
+price:3499,
+image:"watch_01.jpg"
+},
+
+{
+category:"Titan • Chronograph",
+name:"Titan Triple Working 02",
+price:6999,
+image:"watch_02.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 03",
+price:3799,
+image:"watch_03.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 04",
+price:3299,
+image:"watch_04.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 05",
+price:3899,
+image:"watch_05.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 06",
+price:3599,
+image:"watch_06.jpg"
+},
+
+{
+category:"Titan • Leather",
+name:"Titan Leather Watch 01",
+price:2499,
+image:"watch_07.jpg"
+},
+
+{
+category:"Titan • Chronograph",
+name:"Titan Triple Working 03",
+price:7499,
+image:"watch_08.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 07",
+price:3499,
+image:"watch_09.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 08",
+price:3999,
+image:"watch_10.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 09",
+price:3699,
+image:"watch_11.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 10",
+price:3199,
+image:"watch_12.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 11",
+price:3599,
+image:"watch_13.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 12",
+price:3799,
+image:"watch_14.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 13",
+price:3999,
+image:"watch_15.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 14",
+price:3499,
+image:"watch_16.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 15",
+price:3299,
+image:"watch_17.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 16",
+price:3599,
+image:"watch_18.jpg"
+},
+
+{
+category:"Titan • Chronograph",
+name:"Titan Triple Working 04",
+price:7999,
+image:"watch_19.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 17",
+price:3799,
+image:"watch_20.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 18",
+price:3499,
+image:"watch_21.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 19",
+price:3999,
+image:"watch_22.jpg"
+},
+
+{
+category:"Titan • Leather",
+name:"Titan Leather Watch 02",
+price:2999,
+image:"watch_23.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 20",
+price:3899,
+image:"watch_24.jpg"
+},
+
+{
+category:"Titan • Chronograph",
+name:"Titan Triple Working 05",
+price:6999,
+image:"watch_25.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 21",
+price:3599,
+image:"watch_26.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 22",
+price:3799,
+image:"watch_27.jpg"
+},
+
+{
+category:"Titan • Leather",
+name:"Titan Leather Watch 03",
+price:2199,
+image:"watch_28.jpg"
+},
+
+{
+category:"Titan • Leather",
+name:"Titan Leather Watch 04",
+price:2399,
+image:"watch_29.jpg"
+},
+
+{
+category:"Titan • Leather",
+name:"Titan Leather Watch 05",
+price:2799,
+image:"watch_30.jpg"
+},
+
+{
+category:"Titan • Metal",
+name:"Titan Metal Watch 23",
+price:3699,
+image:"watch_31.jpg"
+},
+
+
+/* DESIRE */
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 01",
+price:2499,
+image:"watch_44.jpg"
+},
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 02",
+price:2699,
+image:"watch_45.jpg"
+},
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 03",
+price:2799,
+image:"watch_46.jpg"
+},
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 04",
+price:2899,
+image:"watch_47.jpg"
+},
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 05",
+price:2599,
+image:"watch_48.jpg"
+},
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 06",
+price:2399,
+image:"watch_49.jpg"
+},
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 07",
+price:2799,
+image:"watch_50.jpg"
+},
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 08",
+price:2599,
+image:"watch_51.jpg"
+},
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 09",
+price:2899,
+image:"watch_52.jpg"
+},
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 10",
+price:2699,
+image:"watch_53.jpg"
+},
+
+{
+category:"Desire • Metal",
+name:"Desire Metal 11",
+price:2999,
+image:"watch_54.jpg"
+},
+
+{
+category:"Desire • Leather",
+name:"Desire Leather 01",
+price:1999,
+image:"watch_55.jpg"
+},
+
+{
+category:"Desire • Leather",
+name:"Desire Leather 02",
+price:2199,
+image:"watch_56.jpg"
+},
+
+{
+category:"Desire • Leather",
+name:"Desire Leather 03",
+price:2299,
+image:"watch_57.jpg"
+},
+
+{
+category:"Desire • Leather",
+name:"Desire Leather 04",
+price:1899,
+image:"watch_58.jpg"
+},
+
+{
+category:"Desire • Leather",
+name:"Desire Leather 05",
+price:2399,
+image:"watch_59.jpg"
+}
+
+];
+
+
+
+/* SHOW PRODUCTS */
+
+const grid =
+document.getElementById("grid");
+
+const search =
+document.getElementById("search");
+
+let activeFilter = "All";
+
+
+function money(price){
+
+return "₹" +
+price.toLocaleString("en-IN");
+
+}
+
+
+function renderProducts(){
+
+const searchText =
+search.value.toLowerCase().trim();
+
+
+const filtered =
+products.filter(product => {
+
+const filterMatch =
+activeFilter === "All" ||
+product.category.includes(activeFilter);
+
+const searchMatch =
+!searchText ||
+(product.name + " " +
+product.category)
+.toLowerCase()
+.includes(searchText);
+
+return filterMatch && searchMatch;
+
+});
+
+
+grid.innerHTML =
+filtered.map(product => `
+
+<article class="card">
+
+<div class="pic">
+
+<img
+src="assets/${product.image}"
+alt="${product.name}"
+loading="lazy"
+>
+
+<span class="tag">
+${product.category}
+</span>
+
+</div>
+
+
+<div class="info">
+
+<h3>
+${product.name}
+</h3>
+
+<div class="type">
+Premium Collection
+</div>
+
+<div class="price">
+${money(product.price)}
+</div>
+
+<a
+class="order"
+href="https://wa.me/917665669817?text=Hello%20Rameshwar%20Mobile%20%26%20Watch,%20I%20am%20interested%20in%20${encodeURIComponent(product.name)}"
+target="_blank">
+
+Enquire / Order
+
+</a>
+
+</div>
+
+</article>
+
+`).join("");
+
+}
+
+
+
+/* FILTER BUTTONS */
+
+document
+.querySelectorAll(".filter")
+.forEach(button => {
+
+button.addEventListener("click",()=>{
+
+document
+.querySelectorAll(".filter")
+.forEach(btn =>
+btn.classList.remove("active")
+);
+
+button.classList.add("active");
+
+activeFilter =
+button.dataset.filter;
+
+renderProducts();
+
+});
+
+});
+
+
+/* SEARCH */
+
+search.addEventListener(
+"input",
+renderProducts
+);
+
+
+/* INITIAL */
+
+renderProducts();
+
+</script>
+
+</body>
+</html>
